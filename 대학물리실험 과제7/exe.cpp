@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <iomanip>
 #include <cstring>
-#include <cmath>
 
 using namespace std;
 
@@ -19,7 +18,7 @@ int main() {
 
 	while (f != "0") {
 		cout << "-------------------------------------" << '\n';
-		cout << "대학물리실험 7. 뉴턴 2법칙 보고서 V2" << '\n';
+		cout << "대학물리실험 7. 뉴턴 2법칙 보고서 V3" << '\n';
 		cout << "-------------------------------------" << '\n';
 
 		cout << "m1을 입력하세요 : ";
@@ -69,8 +68,13 @@ int main() {
 		}
 
 		cout << fixed << setprecision(1);
-
-		cout << "\n이론 a값은 " << e << " 입니다" << '\n';
+		if (e < 1) {
+			cout << fixed << setprecision(2);
+			cout << "\n이론 a값은 " << e << " 입니다" << '\n';
+		}
+		else {
+			cout << "\n이론 a값은 " << e << " 입니다" << '\n';
+		}
 
 		cout << fixed << setprecision(0);
 
